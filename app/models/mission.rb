@@ -3,4 +3,8 @@ class Mission < ApplicationRecord
   has_many :astronauts, through: :astronaut_missions
 
   validates_presence_of :title, :time_in_space
+
+  def ordered_missions
+    AstronautMission.where()
+  end
 end
